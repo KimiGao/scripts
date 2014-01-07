@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+# kill wine process
+`ps -axu | grep wine`.split(/\n/).map{|_a| _a.split(' ')[1]}.each{|_b| system("kill #{_b}")}
